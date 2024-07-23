@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors')
 const app = express();
@@ -8,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use('/sms', smsRouter);
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
